@@ -56,10 +56,10 @@
   "homepage": "https://theloopbreaker.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vaultfire/vaultfire-xmtp.git"
+    "url": "https://github.com/Ghostkey316/vaultfire-xmtp.git"
   },
   "bugs": {
-    "url": "https://github.com/vaultfire/vaultfire-xmtp/issues"
+    "url": "https://github.com/Ghostkey316/vaultfire-xmtp/issues"
   },
   "peerDependencies": {
     "@xmtp/agent-sdk": ">=2.2.0",

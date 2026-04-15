@@ -176,7 +176,7 @@ const trusted = await isTrustedAgent('0xAgentAddress', 'base', '0', true);
 
 ## x402 Integration
 
-Wire up [vaultfire-x402](https://github.com/vaultfire/vaultfire-x402) (or any compatible x402 client) to enable payment commands:
+Wire up [vaultfire-x402](https://github.com/Ghostkey316/vaultfire-x402) (or any compatible x402 client) to enable payment commands:
 
 ```typescript
 import { configureVaultfireXMTP, createVaultfireAgent } from '@vaultfire/xmtp';
@@ -400,7 +400,7 @@ AGENT_PRIVATE_KEY=0x... npx ts-node examples/basic-agent.ts
 ## Development
 
 ```bash
-git clone https://github.com/vaultfire/vaultfire-xmtp
+git clone https://github.com/Ghostkey316/vaultfire-xmtp
 cd vaultfire-xmtp
 npm install
 
@@ -423,9 +423,9 @@ npm run typecheck
 
 | Package | Description |
 |---|---|
-| [`@vaultfire/x402`](https://github.com/vaultfire/vaultfire-x402) | x402 payment protocol — USDC micropayments via EIP-3009 |
-| [`@vaultfire/vns`](https://github.com/vaultfire/vaultfire-vns) | Vaultfire Name System — resolve `.vns` names to addresses |
-| [`@vaultfire/bonds`](https://github.com/vaultfire/vaultfire-bonds) | Bond management SDK for AIPartnershipBondsV2 |
+| [`@vaultfire/x402`](https://github.com/Ghostkey316/vaultfire-x402) | x402 payment protocol — USDC micropayments via EIP-3009 |
+| [`@vaultfire/vns`](https://github.com/Ghostkey316/vaultfire-vns) | Vaultfire Name System — resolve `.vns` names to addresses |
+| [`@vaultfire/bonds`](https://github.com/Ghostkey316/vaultfire-contracts) | Bond management SDK for AIPartnershipBondsV2 |
 
 ---
 
