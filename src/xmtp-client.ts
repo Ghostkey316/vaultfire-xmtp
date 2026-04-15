@@ -387,7 +387,7 @@ function deriveAddress(privateKeyHex: string): string {
       privateKeyHex.slice(2),
       'hex',
     );
-    const pubKey = keyPair.getPublic().encode('hex').slice(2); // remove 04 prefix
+    const pubKey = keyPair.getPublic().encode('hex', false).slice(2); // remove 04 prefix
     const pubBuf = Buffer.from(pubKey, 'hex');
     const hash = createHash('sha3-256').update(pubBuf).digest('hex');
     return '0x' + hash.slice(-40);

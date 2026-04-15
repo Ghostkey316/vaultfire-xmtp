@@ -563,12 +563,12 @@ export async function createVaultfireAgent(config: VaultfireAgentConfig = {}) {
     const signer = createSigner(user);
     agent = await Agent.create(signer, {
       env: config.env ?? 'production',
-      dbPath: config.dbPath,
+      dbPath: config.dbPath ?? null,
     });
   } else {
     agent = await Agent.createFromEnv({
       env: config.env ?? 'production',
-      dbPath: config.dbPath,
+      dbPath: config.dbPath ?? null,
     });
   }
 
