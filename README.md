@@ -42,7 +42,11 @@ Build AI agents that communicate over [XMTP](https://xmtp.org) and verify each o
 ## Quick Start
 
 ```bash
+# From npm (when published)
 npm install @vaultfire/xmtp @xmtp/agent-sdk
+
+# From GitHub (works now)
+npm install github:Ghostkey316/vaultfire-xmtp @xmtp/agent-sdk
 ```
 
 ### Create a trust-gated agent in ~10 lines
