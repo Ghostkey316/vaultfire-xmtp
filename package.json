@@ -1,0 +1,86 @@
+{
+  "name": "@vaultfire/xmtp",
+  "version": "1.0.0",
+  "description": "Trust-gated XMTP agent messaging with on-chain Vaultfire bond verification. Encrypted agent-to-agent communication on Base, Avalanche, and Ethereum.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./browser": {
+      "import": "./dist/xmtp-browser.mjs",
+      "require": "./dist/xmtp-browser.js",
+      "types": "./dist/xmtp-browser.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "build:watch": "tsc --project tsconfig.json --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src/**/*.ts",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "xmtp",
+    "vaultfire",
+    "agent",
+    "messaging",
+    "trust",
+    "blockchain",
+    "base",
+    "avalanche",
+    "ethereum",
+    "x402",
+    "bonds",
+    "encrypted",
+    "web3",
+    "AI",
+    "accountability"
+  ],
+  "author": "Vaultfire Protocol <theloopbreaker.com>",
+  "license": "MIT",
+  "homepage": "https://theloopbreaker.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vaultfire/vaultfire-xmtp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vaultfire/vaultfire-xmtp/issues"
+  },
+  "peerDependencies": {
+    "@xmtp/agent-sdk": ">=2.2.0",
+    "ethers": ">=6.0.0"
+  },
+  "peerDependenciesMeta": {
+    "ethers": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@xmtp/agent-sdk": "^2.2.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0",
+    "@vitest/coverage-v8": "^1.6.0"
+  },
+  "optionalDependencies": {
+    "@xmtp/xmtp-js": "^11.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

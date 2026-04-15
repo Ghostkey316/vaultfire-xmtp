@@ -1,0 +1,54 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+
+# XMTP local databases
+*.db
+*.db-shm
+*.db-wal
+xmtp-db/
+.xmtp/
+
+# Test coverage
+coverage/
+.coverage/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*.suo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Package manager lock files (keep only one)
+# Uncomment the one you use:
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Runtime
+*.pid
+*.seed
+*.pid.lock
