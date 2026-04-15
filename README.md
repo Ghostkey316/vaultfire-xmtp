@@ -430,6 +430,8 @@ npm run typecheck
 | [`@vaultfire/x402`](https://github.com/Ghostkey316/vaultfire-x402) | x402 payment protocol — USDC micropayments via EIP-3009 |
 | [`@vaultfire/vns`](https://github.com/Ghostkey316/vaultfire-vns) | Vaultfire Name System — resolve `.vns` names to addresses |
 | [`@vaultfire/bonds`](https://github.com/Ghostkey316/vaultfire-contracts) | Bond management SDK for AIPartnershipBondsV2 |
+| [`vaultfire-arbitrum`](https://github.com/Ghostkey316/vaultfire-arbitrum) | Arbitrum One deployment — pre-deployment, SDK ready |
+| [`vaultfire-polygon`](https://github.com/Ghostkey316/vaultfire-polygon) | Polygon PoS deployment — pre-deployment, SDK ready |
 
 ---
 
