@@ -427,6 +427,7 @@ npm run typecheck
 
 | Package | Description |
 |---|---|
+| [`@vaultfire/langchain`](https://github.com/Ghostkey316/vaultfire-langchain) | LangChain/LangGraph integration — 9 tools, 3-line setup, 4 chains |
 | [`@vaultfire/x402`](https://github.com/Ghostkey316/vaultfire-x402) | x402 payment protocol — USDC micropayments via EIP-3009 |
 | [`@vaultfire/vns`](https://github.com/Ghostkey316/vaultfire-vns) | Vaultfire Name System — resolve `.vns` names to addresses |
 | [`@vaultfire/bonds`](https://github.com/Ghostkey316/vaultfire-contracts) | Bond management SDK for AIPartnershipBondsV2 |
