@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/@vaultfire/xmtp?color=%230099FF&label=npm&logo=npm)](https://www.npmjs.com/package/@vaultfire/xmtp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![XMTP](https://img.shields.io/badge/XMTP-v2.2.0-5B2EE7?logo=ethereum)](https://xmtp.org)
+[![XMTP](https://img.shields.io/badge/XMTP-v2.2.0-5B2EE7)](https://xmtp.org)
 [![Base](https://img.shields.io/badge/Base-Mainnet-0052FF?logo=coinbase)](https://base.org)
 [![Avalanche](https://img.shields.io/badge/Avalanche-Mainnet-E84142?logo=avalanche)](https://avax.network)
 
@@ -267,7 +267,7 @@ const agent = await createVaultfireAgent({
   walletKey?: string;         // Hex private key (or set WALLET_KEY env var)
   env?: 'production' | 'dev' | 'local';
   dbPath?: string;            // XMTP local DB path
-  chain?: string;             // 'base' | 'avalanche' | 'ethereum' (default: 'base')
+  chain?: string;             // 'base' | 'avalanche' | 'arbitrum' | 'polygon' (default: 'base')
   minBondWei?: string;        // Minimum stake in wei (default: '0')
   blockUntrusted?: boolean;   // Block unverified senders (default: false)
   x402?: X402Integration;     // Optional payment integration
