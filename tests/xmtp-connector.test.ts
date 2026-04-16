@@ -112,7 +112,7 @@ describe('encodeVaultfireMeta / decodeVaultfireMeta', () => {
   });
 
   it('round-trips correctly for each chain', () => {
-    for (const chain of ['base', 'avalanche', 'ethereum']) {
+    for (const chain of ['base', 'avalanche', 'arbitrum', 'polygon']) {
       const encoded = encodeVaultfireMeta(TEST_ADDRESS, chain);
       const decoded = decodeVaultfireMeta(encoded);
 
@@ -191,7 +191,7 @@ describe('formatWei', () => {
 // ---------------------------------------------------------------------------
 
 describe('Contract addresses', () => {
-  const CHAINS = ['base', 'avalanche', 'ethereum'] as const;
+  const CHAINS = ['base', 'avalanche', 'arbitrum', 'polygon'] as const;
 
   it('RPC_URLS has all chains', () => {
     for (const chain of CHAINS) {
@@ -202,13 +202,15 @@ describe('Contract addresses', () => {
   it('IDENTITY_REGISTRY has correct checksummed-style addresses', () => {
     expect(IDENTITY_REGISTRY['base']).toBe('0x35978DB675576598F0781dA2133E94cdCf4858bC');
     expect(IDENTITY_REGISTRY['avalanche']).toBe('0x57741F4116925341d8f7Eb3F381d98e07C73B4a3');
-    expect(IDENTITY_REGISTRY['ethereum']).toBe('0x1A80F77e12f1bd04538027aed6d056f5DCcDCD3C');
+    expect(IDENTITY_REGISTRY['arbitrum']).toBe('0x6298c62FDA57276DC60de9E716fbBAc23d06D5F1');
+    expect(IDENTITY_REGISTRY['polygon']).toBe('0x6298c62FDA57276DC60de9E716fbBAc23d06D5F1');
   });
 
   it('BOND_CONTRACT has correct checksummed-style addresses', () => {
     expect(BOND_CONTRACT['base']).toBe('0xC574CF2a09B0B470933f0c6a3ef422e3fb25b4b4');
     expect(BOND_CONTRACT['avalanche']).toBe('0xea6B504827a746d781f867441364C7A732AA4b07');
-    expect(BOND_CONTRACT['ethereum']).toBe('0x247F31bB2b5a0d28E68bf24865AA242965FF99cd');
+    expect(BOND_CONTRACT['arbitrum']).toBe('0x0E777878C5b5248E1b52b09Ab5cdEb2eD6e7Da58');
+    expect(BOND_CONTRACT['polygon']).toBe('0x0E777878C5b5248E1b52b09Ab5cdEb2eD6e7Da58');
   });
 
   it('all addresses are 42 characters (0x + 40 hex)', () => {

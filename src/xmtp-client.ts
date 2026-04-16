@@ -91,7 +91,7 @@ interface XMTPConvoInstance {
  * ```
  */
 export class XMTPClient {
-  /** The agent's Ethereum address derived from the private key */
+  /** The agent's EVM address derived from the private key */
   public readonly address: string;
   /** Whether the client is configured with a valid key */
   public readonly enabled: boolean;
@@ -203,7 +203,7 @@ export class XMTPClient {
   /**
    * Send a text message to a peer address via XMTP.
    *
-   * @param to - Recipient Ethereum address
+   * @param to - Recipient EVM address
    * @param content - Message text
    * @returns Send result with messageId or error
    */
@@ -254,7 +254,7 @@ export class XMTPClient {
   /**
    * Get recent messages from a specific peer.
    *
-   * @param peerAddress - Peer Ethereum address
+   * @param peerAddress - Peer EVM address
    * @param limit - Max messages to return (default: 20)
    */
   async getMessages(peerAddress: string, limit = 20): Promise<XmtpMessage[]> {
@@ -281,7 +281,7 @@ export class XMTPClient {
    * Stream incoming messages from a specific peer in real time.
    * Calls `handler` for each incoming message until the stream ends or throws.
    *
-   * @param peerAddress - Peer Ethereum address
+   * @param peerAddress - Peer EVM address
    * @param handler - Callback for each received message
    */
   async streamMessages(
@@ -360,11 +360,11 @@ export function resetXMTPClient(): void {
 }
 
 // ---------------------------------------------------------------------------
-// Internal utility: derive Ethereum address from a private key
+// Internal utility: derive EVM address from a private key
 // ---------------------------------------------------------------------------
 
 /**
- * Synchronously derive an Ethereum address from a private key hex string.
+ * Synchronously derive an EVM address from a private key hex string.
  * Uses the Keccak-256 algorithm on the uncompressed secp256k1 public key.
  *
  * This is a minimal implementation to avoid importing ethers at module load

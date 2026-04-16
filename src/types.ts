@@ -32,7 +32,7 @@ export type BondTier = 'none' | 'bronze' | 'silver' | 'gold' | 'platinum';
  * Populated by reading AIPartnershipBondsV2 and ERC8004IdentityRegistry.
  */
 export interface VaultfireTrustProfile {
-  /** Ethereum address of the agent */
+  /** EVM address of the agent */
   address: string;
   /** Whether the agent is registered in ERC8004IdentityRegistry */
   isRegistered: boolean;
@@ -57,7 +57,7 @@ export interface VaultfireTrustProfile {
  * The `bestProfile` is the one with the highest active bond.
  */
 export interface MultiChainTrustProfile {
-  /** Ethereum address */
+  /** EVM address */
   address: string;
   /** Profile from the chain with the highest active bond */
   bestProfile: VaultfireTrustProfile;
@@ -122,7 +122,7 @@ export interface VaultfireAgentConfig {
 export interface X402Integration {
   /**
    * Initiate an x402 USDC payment via EIP-3009 transferWithAuthorization.
-   * @param recipient - Ethereum address or .vns name
+   * @param recipient - EVM address or .vns name
    * @param amount - USDC amount as a decimal string (e.g., '1.50')
    * @param reason - Optional payment reason / memo
    * @returns Signed payment payload and an on-chain payment record

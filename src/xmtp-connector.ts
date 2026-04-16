@@ -244,7 +244,7 @@ export function clearTrustCache(): void {
  *
  * Results are cached for 5 minutes (TRUST_CACHE_TTL_MS).
  *
- * @param address - Ethereum address to verify (with or without 0x prefix)
+ * @param address - EVM address to verify (with or without 0x prefix)
  * @param chain   - Chain to query: 'base' | 'avalanche' | 'arbitrum' | 'polygon' (default: 'base')
  * @returns Trust profile including registration status, bond amount, tier
  */
@@ -388,7 +388,7 @@ export async function verifyVaultfireTrust(
  *
  * Results are cached for 5 minutes.
  *
- * @param address - Ethereum address to verify
+ * @param address - EVM address to verify
  * @returns Aggregated multi-chain trust profile
  */
 export async function verifyMultiChainTrust(
@@ -473,7 +473,7 @@ export async function verifyMultiChainTrust(
 /**
  * Quick boolean check: is this address a trusted Vaultfire agent?
  *
- * @param address    - Ethereum address to check
+ * @param address    - EVM address to check
  * @param chain      - Chain to check (default: 'base')
  * @param minBond    - Minimum stake amount in wei (default: '0' — any bond)
  * @param multiChain - When `true`, checks all chains and returns `true` if
@@ -769,7 +769,7 @@ export async function createVaultfireAgent(config: VaultfireAgentConfig = {}) {
           '- `/pay 0x1234...5678 1.50 API access fee`\n' +
           '- `/pay vaultfire-sentinel 2.00 Security audit`\n' +
           '- `/pay sentinel-7.vns 0.50 Task completion`\n\n' +
-          'Accepts raw Ethereum addresses (0x...) or .vns names.\n' +
+          'Accepts raw EVM addresses (0x...) or .vns names.\n' +
           'Sends USDC on Base via EIP-3009 transferWithAuthorization.',
         );
         return;
@@ -783,7 +783,7 @@ export async function createVaultfireAgent(config: VaultfireAgentConfig = {}) {
       if (!isAddress && !isVNS) {
         await ctx.conversation.sendMarkdown(
           '**Invalid Recipient**\n\n' +
-          'Must be a valid Ethereum address (`0x...`) or a .vns name.\n\n' +
+          'Must be a valid EVM address (`0x...`) or a .vns name.\n\n' +
           'Use `/pay` with no arguments to see examples.',
         );
         return;

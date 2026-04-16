@@ -1,7 +1,7 @@
 {
   "name": "@vaultfire/xmtp",
   "version": "1.0.0",
-  "description": "Trust-gated XMTP agent messaging with on-chain Vaultfire bond verification. Encrypted agent-to-agent communication on Base, Avalanche, and Ethereum.",
+  "description": "Trust-gated XMTP agent messaging with on-chain Vaultfire bond verification. Encrypted agent-to-agent communication on Base, Avalanche, Arbitrum, and Polygon.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -44,13 +44,14 @@
     "blockchain",
     "base",
     "avalanche",
-    "ethereum",
     "x402",
     "bonds",
     "encrypted",
     "web3",
     "AI",
-    "accountability"
+    "accountability",
+    "arbitrum",
+    "polygon"
   ],
   "author": "Vaultfire Protocol <theloopbreaker.com>",
   "license": "MIT",

@@ -526,7 +526,7 @@ export class XMTPBrowserClient {
   /**
    * Create a multi-agent coordination room.
    *
-   * @param agentAddresses - Ethereum addresses of participating agents
+   * @param agentAddresses - EVM addresses of participating agents
    * @param roomName - Human-readable room name
    * @returns The conversation topic identifier
    */
@@ -562,8 +562,8 @@ export class XMTPBrowserClient {
   /**
    * Create a human-AI collaboration room.
    *
-   * @param humanAddress - Human participant's Ethereum address
-   * @param agentAddress - AI agent's Ethereum address
+   * @param humanAddress - Human participant's EVM address
+   * @param agentAddress - AI agent's EVM address
    * @param taskDescription - Brief description of the collaboration task
    * @returns The conversation topic identifier
    */
