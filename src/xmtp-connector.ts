@@ -52,28 +52,31 @@ export type {
 };
 
 // ---------------------------------------------------------------------------
-// Contract constants (verified on BaseScan / SnowTrace / Etherscan)
+// Contract constants (verified on BaseScan / SnowTrace / Arbiscan / PolygonScan)
 // ---------------------------------------------------------------------------
 
 /** JSON-RPC endpoints for supported chains */
 export const RPC_URLS: Readonly<Record<string, string>> = {
   base: 'https://mainnet.base.org',
   avalanche: 'https://api.avax.network/ext/bc/C/rpc',
-  ethereum: 'https://eth.llamarpc.com',
+  arbitrum: 'https://arb1.arbitrum.io/rpc',
+  polygon: 'https://polygon-bor-rpc.publicnode.com',
 } as const;
 
 /** ERC8004IdentityRegistry — deployed addresses */
 export const IDENTITY_REGISTRY: Readonly<Record<string, string>> = {
   base: '0x35978DB675576598F0781dA2133E94cdCf4858bC',
   avalanche: '0x57741F4116925341d8f7Eb3F381d98e07C73B4a3',
-  ethereum: '0x1A80F77e12f1bd04538027aed6d056f5DCcDCD3C',
+  arbitrum: '0x6298c62FDA57276DC60de9E716fbBAc23d06D5F1',
+  polygon: '0x6298c62FDA57276DC60de9E716fbBAc23d06D5F1',
 } as const;
 
 /** AIPartnershipBondsV2 — deployed addresses */
 export const BOND_CONTRACT: Readonly<Record<string, string>> = {
   base: '0xC574CF2a09B0B470933f0c6a3ef422e3fb25b4b4',
   avalanche: '0xea6B504827a746d781f867441364C7A732AA4b07',
-  ethereum: '0x247F31bB2b5a0d28E68bf24865AA242965FF99cd',
+  arbitrum: '0x0E777878C5b5248E1b52b09Ab5cdEb2eD6e7Da58',
+  polygon: '0x0E777878C5b5248E1b52b09Ab5cdEb2eD6e7Da58',
 } as const;
 
 // ---------------------------------------------------------------------------
@@ -242,7 +245,7 @@ export function clearTrustCache(): void {
  * Results are cached for 5 minutes (TRUST_CACHE_TTL_MS).
  *
  * @param address - Ethereum address to verify (with or without 0x prefix)
- * @param chain   - Chain to query: 'base' | 'avalanche' | 'ethereum' (default: 'base')
+ * @param chain   - Chain to query: 'base' | 'avalanche' | 'arbitrum' | 'polygon' (default: 'base')
  * @returns Trust profile including registration status, bond amount, tier
  */
 export async function verifyVaultfireTrust(
@@ -379,7 +382,7 @@ export async function verifyVaultfireTrust(
 /**
  * Verify trust across all supported chains and return the best result.
  *
- * Queries Base, Avalanche, and Ethereum in parallel. The "best" profile is
+ * Queries Base, Avalanche, Arbitrum, and Polygon in parallel. The "best" profile is
  * the one with the highest active bond amount. If no active bonds exist on
  * any chain, the first chain with any bond data is returned as the best.
  *
@@ -705,7 +708,8 @@ export async function createVaultfireAgent(config: VaultfireAgentConfig = {}) {
       `|-------|--------|\n` +
       `| Base | \`${BOND_CONTRACT['base']}\` |\n` +
       `| Avalanche | \`${BOND_CONTRACT['avalanche']}\` |\n` +
-      `| Ethereum | \`${BOND_CONTRACT['ethereum']}\` |\n\n` +
+      `| Arbitrum | \`${BOND_CONTRACT['arbitrum']}\` |\n` +
+      `| Polygon | \`${BOND_CONTRACT['polygon']}\` |\n\n` +
       '> Bond tiers: bronze (any), silver (0.01 ETH), gold (0.1 ETH), platinum (1.0 ETH)',
     );
   });
@@ -714,10 +718,10 @@ export async function createVaultfireAgent(config: VaultfireAgentConfig = {}) {
   router.command('/contracts', 'Show Vaultfire contract addresses', async (ctx) => {
     await ctx.conversation.sendMarkdown(
       '**Vaultfire Contract Addresses**\n\n' +
-      '| Contract | Base | Avalanche | Ethereum |\n' +
-      '|---|---|---|---|\n' +
-      `| ERC8004IdentityRegistry | \`${IDENTITY_REGISTRY['base']}\` | \`${IDENTITY_REGISTRY['avalanche']}\` | \`${IDENTITY_REGISTRY['ethereum']}\` |\n` +
-      `| AIPartnershipBondsV2 | \`${BOND_CONTRACT['base']}\` | \`${BOND_CONTRACT['avalanche']}\` | \`${BOND_CONTRACT['ethereum']}\` |\n\n` +
+      '| Contract | Base | Avalanche | Arbitrum | Polygon |\n' +
+      '|---|---|---|---|---|\n' +
+      `| ERC8004IdentityRegistry | \`${IDENTITY_REGISTRY['base']}\` | \`${IDENTITY_REGISTRY['avalanche']}\` | \`${IDENTITY_REGISTRY['arbitrum']}\` | \`${IDENTITY_REGISTRY['polygon']}\` |\n` +
+      `| AIPartnershipBondsV2 | \`${BOND_CONTRACT['base']}\` | \`${BOND_CONTRACT['avalanche']}\` | \`${BOND_CONTRACT['arbitrum']}\` | \`${BOND_CONTRACT['polygon']}\` |\n\n` +
       '> Hub: [theloopbreaker.com](https://theloopbreaker.com)',
     );
   });

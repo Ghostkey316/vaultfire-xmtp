@@ -324,7 +324,7 @@ export interface WalletProvider {
 // ---------------------------------------------------------------------------
 
 /** Supported chain identifiers */
-export type SupportedChain = 'base' | 'avalanche' | 'ethereum';
+export type SupportedChain = 'base' | 'avalanche' | 'arbitrum' | 'polygon';
 
 /** A record of contract addresses keyed by chain name */
 export type ChainAddressMap = Record<SupportedChain, string>;
