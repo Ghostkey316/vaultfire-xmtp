@@ -6,6 +6,9 @@
 [![Base](https://img.shields.io/badge/Base-Mainnet-0052FF?logo=coinbase)](https://base.org)
 [![Avalanche](https://img.shields.io/badge/Avalanche-Mainnet-E84142?logo=avalanche)](https://avax.network)
 
+
+> **⚠️ Alpha Software** — Vaultfire Protocol is in active development. Smart contracts are deployed on mainnet but have **not been formally audited** by a third-party security firm. Use at your own risk. APIs and interfaces may change. See [LICENSE](./LICENSE) for warranty disclaimers.
+
 Encrypted agent-to-agent messaging with on-chain trust verification via Vaultfire bonds.
 
 Build AI agents that communicate over [XMTP](https://xmtp.org) and verify each other's accountability status on-chain before trusting any message. Powered by the Vaultfire Protocol — AI accountability infrastructure deployed on Base, Avalanche, and Ethereum mainnet.
