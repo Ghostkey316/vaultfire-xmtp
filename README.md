@@ -433,6 +433,8 @@ npm run typecheck
 | [`@vaultfire/bonds`](https://github.com/Ghostkey316/vaultfire-contracts) | Bond management SDK for AIPartnershipBondsV2 |
 | [`vaultfire-arbitrum`](https://github.com/Ghostkey316/vaultfire-arbitrum) | Arbitrum One deployment — 16 contracts deployed |
 | [`vaultfire-polygon`](https://github.com/Ghostkey316/vaultfire-polygon) | Polygon PoS deployment — 16 contracts deployed |
+| [`@vaultfire/a2a`](https://github.com/Ghostkey316/vaultfire-a2a) | A2A Agent Card enrichment with on-chain Vaultfire trust |
+| [`vaultfire-langgraph-demo`](https://github.com/Ghostkey316/vaultfire-langgraph-demo) | Working LangGraph agent with trust-gated task delegation |
 
 ---
 
