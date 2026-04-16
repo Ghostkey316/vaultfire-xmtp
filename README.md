@@ -11,7 +11,7 @@
 
 Encrypted agent-to-agent messaging with on-chain trust verification via Vaultfire bonds.
 
-Build AI agents that communicate over [XMTP](https://xmtp.org) and verify each other's accountability status on-chain before trusting any message. Powered by the Vaultfire Protocol — AI accountability infrastructure deployed on Base, Avalanche, and Ethereum mainnet.
+Build AI agents that communicate over [XMTP](https://xmtp.org) and verify each other's accountability status on-chain before trusting any message. Powered by the Vaultfire Protocol — AI accountability infrastructure deployed on Base, Avalanche, Arbitrum, and Polygon mainnet.
 
 ---
 
@@ -36,7 +36,7 @@ Build AI agents that communicate over [XMTP](https://xmtp.org) and verify each o
 
 **XMTP** provides end-to-end encrypted messaging — no intermediary sees message content.
 
-**Vaultfire** provides on-chain accountability — each agent must stake a bond to participate. Bonds are read directly from `AIPartnershipBondsV2` smart contracts on Base, Avalanche, and Ethereum.
+**Vaultfire** provides on-chain accountability — each agent must stake a bond to participate. Bonds are read directly from `AIPartnershipBondsV2` smart contracts on Base, Avalanche, Arbitrum, and Polygon.
 
 **x402** provides micropayments — agents can send/receive USDC via the x402 protocol (EIP-3009 `transferWithAuthorization`) without intermediaries.
 
@@ -147,7 +147,7 @@ Every agent created with `createVaultfireAgent` responds to these commands autom
 | Command       | Description                                              |
 |---------------|----------------------------------------------------------|
 | `/trust`      | Check the sender's Vaultfire trust status on current chain |
-| `/trust-all`  | Check trust across Base, Avalanche, and Ethereum         |
+| `/trust-all`  | Check trust across Base, Avalanche, Arbitrum, and Polygon |
 | `/status`     | Show this agent's own trust profile and configuration    |
 | `/bond`       | Staking instructions and contract addresses              |
 | `/contracts`  | Show all Vaultfire contract addresses                    |
@@ -361,12 +361,14 @@ Clear all cached trust lookups. Useful after staking/unstaking.
 
 | Contract | Chain | Address |
 |---|---|---|
-| ERC8004IdentityRegistry | Base | `0x35978DB675576598F0781dA2133E94cdCf4858bC` |
+| ERC8004IdentityRegistry | Base | `0x6298c62FDA57276DC60de9E716fbBAc23d06D5F1` |
 | ERC8004IdentityRegistry | Avalanche | `0x57741F4116925341d8f7Eb3F381d98e07C73B4a3` |
-| ERC8004IdentityRegistry | Ethereum | `0x1A80F77e12f1bd04538027aed6d056f5DCcDCD3C` |
-| AIPartnershipBondsV2 | Base | `0xC574CF2a09B0B470933f0c6a3ef422e3fb25b4b4` |
+| ERC8004IdentityRegistry | Arbitrum | `0x6298c62FDA57276DC60de9E716fbBAc23d06D5F1` |
+| ERC8004IdentityRegistry | Polygon | `0x6298c62FDA57276DC60de9E716fbBAc23d06D5F1` |
+| AIPartnershipBondsV2 | Base | `0x0E777878C5b5248E1b52b09Ab5cdEb2eD6e7Da58` |
 | AIPartnershipBondsV2 | Avalanche | `0xea6B504827a746d781f867441364C7A732AA4b07` |
-| AIPartnershipBondsV2 | Ethereum | `0x247F31bB2b5a0d28E68bf24865AA242965FF99cd` |
+| AIPartnershipBondsV2 | Arbitrum | `0x0E777878C5b5248E1b52b09Ab5cdEb2eD6e7Da58` |
+| AIPartnershipBondsV2 | Polygon | `0x0E777878C5b5248E1b52b09Ab5cdEb2eD6e7Da58` |
 
 **RPC Endpoints:**
 
@@ -374,7 +376,8 @@ Clear all cached trust lookups. Useful after staking/unstaking.
 |---|---|
 | Base | `https://mainnet.base.org` |
 | Avalanche | `https://api.avax.network/ext/bc/C/rpc` |
-| Ethereum | `https://eth.llamarpc.com` |
+| Arbitrum | `https://arb1.arbitrum.io/rpc` |
+| Polygon | `https://polygon-rpc.com` |
 
 ---
 
