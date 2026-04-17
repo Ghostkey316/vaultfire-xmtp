@@ -73,10 +73,18 @@ export const IDENTITY_REGISTRY: Readonly<Record<string, string>> = {
 
 /** AIPartnershipBondsV2 — deployed addresses */
 export const BOND_CONTRACT: Readonly<Record<string, string>> = {
-  base: '0xC574CF2a09B0B470933f0c6a3ef422e3fb25b4b4',
-  avalanche: '0xea6B504827a746d781f867441364C7A732AA4b07',
-  arbitrum: '0x0E777878C5b5248E1b52b09Ab5cdEb2eD6e7Da58',
-  polygon: '0x0E777878C5b5248E1b52b09Ab5cdEb2eD6e7Da58',
+  base: '0x01C479F0c039fEC40c0Cf1c5C921bab457d57441',
+  avalanche: '0xDC8447c66fE9D9c7D54607A98346A15324b7985D',
+  arbitrum: '0xdB54B8925664816187646174bdBb6Ac658A55a5F',
+  polygon: '0x83dd216449B3F0574E39043ECFE275946fa492e9',
+} as const;
+
+/** AIAccountabilityBondsV2 — deployed addresses (yield pools funded & operational) */
+export const ACCOUNTABILITY_BOND_CONTRACT: Readonly<Record<string, string>> = {
+  base: '0x6750D28865434344e04e1D0a6044394b726C3dfE',
+  avalanche: '0x376831fB2457E34559891c32bEb61c442053C066',
+  arbitrum: '0xef3A944f4d7bb376699C83A29d7Cb42C90D9B6F0',
+  polygon: '0xdB54B8925664816187646174bdBb6Ac658A55a5F',
 } as const;
 
 // ---------------------------------------------------------------------------

@@ -207,10 +207,10 @@ describe('Contract addresses', () => {
   });
 
   it('BOND_CONTRACT has correct checksummed-style addresses', () => {
-    expect(BOND_CONTRACT['base']).toBe('0xC574CF2a09B0B470933f0c6a3ef422e3fb25b4b4');
-    expect(BOND_CONTRACT['avalanche']).toBe('0xea6B504827a746d781f867441364C7A732AA4b07');
-    expect(BOND_CONTRACT['arbitrum']).toBe('0x0E777878C5b5248E1b52b09Ab5cdEb2eD6e7Da58');
-    expect(BOND_CONTRACT['polygon']).toBe('0x0E777878C5b5248E1b52b09Ab5cdEb2eD6e7Da58');
+    expect(BOND_CONTRACT['base']).toBe('0x01C479F0c039fEC40c0Cf1c5C921bab457d57441');
+    expect(BOND_CONTRACT['avalanche']).toBe('0xDC8447c66fE9D9c7D54607A98346A15324b7985D');
+    expect(BOND_CONTRACT['arbitrum']).toBe('0xdB54B8925664816187646174bdBb6Ac658A55a5F');
+    expect(BOND_CONTRACT['polygon']).toBe('0x83dd216449B3F0574E39043ECFE275946fa492e9');
   });
 
   it('all addresses are 42 characters (0x + 40 hex)', () => {

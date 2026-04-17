@@ -365,10 +365,10 @@ Clear all cached trust lookups. Useful after staking/unstaking.
 | ERC8004IdentityRegistry | Avalanche | `0x57741F4116925341d8f7Eb3F381d98e07C73B4a3` |
 | ERC8004IdentityRegistry | Arbitrum | `0x6298c62FDA57276DC60de9E716fbBAc23d06D5F1` |
 | ERC8004IdentityRegistry | Polygon | `0x6298c62FDA57276DC60de9E716fbBAc23d06D5F1` |
-| AIPartnershipBondsV2 | Base | `0x0E777878C5b5248E1b52b09Ab5cdEb2eD6e7Da58` |
-| AIPartnershipBondsV2 | Avalanche | `0xea6B504827a746d781f867441364C7A732AA4b07` |
-| AIPartnershipBondsV2 | Arbitrum | `0x0E777878C5b5248E1b52b09Ab5cdEb2eD6e7Da58` |
-| AIPartnershipBondsV2 | Polygon | `0x0E777878C5b5248E1b52b09Ab5cdEb2eD6e7Da58` |
+| AIPartnershipBondsV2 | Base | `0xdB54B8925664816187646174bdBb6Ac658A55a5F` |
+| AIPartnershipBondsV2 | Avalanche | `0xDC8447c66fE9D9c7D54607A98346A15324b7985D` |
+| AIPartnershipBondsV2 | Arbitrum | `0xdB54B8925664816187646174bdBb6Ac658A55a5F` |
+| AIPartnershipBondsV2 | Polygon | `0x83dd216449B3F0574E39043ECFE275946fa492e9` |
 
 **RPC Endpoints:**
 
