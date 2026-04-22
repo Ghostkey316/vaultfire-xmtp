@@ -51,7 +51,7 @@ import {
 
 const TEST_PRIVATE_KEY = process.env['TEST_PRIVATE_KEY'] ?? '';
 const TEST_ADDRESS = process.env['TEST_ADDRESS'] ?? '0x0000000000000000000000000000000000000001';
-const AGENT_ADDRESS = '0xA054f831B562e729F8D268291EBde1B2EDcFb84F';
+const AGENT_ADDRESS = '0xfA15Ee28939B222B0448261A22156070f0A7813C';
 
 // ---------------------------------------------------------------------------
 // Browser environment simulation (Node.js only — in real browser, skip this)

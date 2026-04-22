@@ -40,7 +40,7 @@ import {
 // ---------------------------------------------------------------------------
 
 const AGENT_PRIVATE_KEY = process.env['AGENT_PRIVATE_KEY'] ?? '';
-const RECIPIENT_ADDRESS = process.env['RECIPIENT_ADDRESS'] ?? '0xA054f831B562e729F8D268291EBde1B2EDcFb84F';
+const RECIPIENT_ADDRESS = process.env['RECIPIENT_ADDRESS'] ?? '0xfA15Ee28939B222B0448261A22156070f0A7813C';
 
 if (!AGENT_PRIVATE_KEY) {
   console.error('[payment-demo] Set AGENT_PRIVATE_KEY to run this example.');

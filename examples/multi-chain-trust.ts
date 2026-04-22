@@ -36,7 +36,7 @@ import {
 // ---------------------------------------------------------------------------
 
 const ADDRESSES_TO_CHECK = [
-  '0xA054f831B562e729F8D268291EBde1B2EDcFb84F', // Embris Agent (example)
+  '0xfA15Ee28939B222B0448261A22156070f0A7813C', // Embris Agent (example)
   '0x0000000000000000000000000000000000000001', // No-bond address (example)
 ];
 

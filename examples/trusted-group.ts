@@ -46,7 +46,7 @@ const MEMBER_ADDRESSES_RAW = process.env['MEMBER_ADDRESSES'] ?? '';
 const MEMBER_ADDRESSES = MEMBER_ADDRESSES_RAW
   ? MEMBER_ADDRESSES_RAW.split(',').map((a) => a.trim())
   : [
-      '0xA054f831B562e729F8D268291EBde1B2EDcFb84F', // Example: Embris Agent
+      '0xfA15Ee28939B222B0448261A22156070f0A7813C', // Example: Embris Agent
       '0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045', // Example: vitalik.eth
     ];
 

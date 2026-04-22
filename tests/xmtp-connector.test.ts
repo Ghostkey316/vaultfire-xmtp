@@ -104,7 +104,7 @@ describe('Trust cache', () => {
 // ---------------------------------------------------------------------------
 
 describe('encodeVaultfireMeta / decodeVaultfireMeta', () => {
-  const TEST_ADDRESS = '0xA054f831B562e729F8D268291EBde1B2EDcFb84F';
+  const TEST_ADDRESS = '0xfA15Ee28939B222B0448261A22156070f0A7813C';
 
   it('encodes to a [VF:...] string', () => {
     const encoded = encodeVaultfireMeta(TEST_ADDRESS, 'base');
@@ -238,7 +238,7 @@ describe('Contract addresses', () => {
 // ---------------------------------------------------------------------------
 
 describe('verifyVaultfireTrust (mocked RPC)', () => {
-  const TEST_ADDRESS = '0xA054f831B562e729F8D268291EBde1B2EDcFb84F';
+  const TEST_ADDRESS = '0xfA15Ee28939B222B0448261A22156070f0A7813C';
 
   beforeEach(() => {
     clearTrustCache();
@@ -419,7 +419,7 @@ describe('verifyVaultfireTrust (mocked RPC)', () => {
 // ---------------------------------------------------------------------------
 
 describe('isTrustedAgent', () => {
-  const TEST_ADDRESS = '0xA054f831B562e729F8D268291EBde1B2EDcFb84F';
+  const TEST_ADDRESS = '0xfA15Ee28939B222B0448261A22156070f0A7813C';
 
   beforeEach(() => {
     clearTrustCache();
